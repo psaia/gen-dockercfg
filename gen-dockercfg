@@ -1,0 +1,11 @@
+#!/bin/sh
+server=$1
+username=$2
+password=$3
+email=$4
+
+authkey=$(echo "$username:$password" | base64)
+str=$(echo "{\"$server\":{\"username\":\"$username\",\"password\":\"$password\",\"email\":\"$email\",\"auth\":\"$authkey\"}}")
+dockercfg=$(echo $str | base64)
+
+echo ".dockercfg value:\n$dockercfg"
