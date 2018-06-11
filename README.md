@@ -1,7 +1,8 @@
 # gen-dockercfg
 Simple bash script to generate a base64 encoded dockercfg for a kubernetes
 docker registry secret. This is useful for when you need to create the
-dockercfg code manually instead of running: `kubectl create secret docker-registry mydockercfg \ --docker-server "your-server" ...`
+dockercfg code manually instead of running: `kubectl create secret docker-registry mydockercfg \ --docker-server "your-server" ...`.
+Creating a values.yaml for [helm](https://helm.sh/) would be a good use case.
 
 ### Usage
 
