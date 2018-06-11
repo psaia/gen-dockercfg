@@ -4,8 +4,8 @@ username=$2
 password=$3
 email=$4
 
-authkey=$(echo "$username:$password" | base64)
+authkey=$(echo "$username:$password" | base64 | tr -d '\n')
 str=$(echo "{\"$server\":{\"username\":\"$username\",\"password\":\"$password\",\"email\":\"$email\",\"auth\":\"$authkey\"}}")
-dockercfg=$(echo $str | base64)
+dockercfg=$(echo $str | base64 | tr -d '\n')
 
 echo ".dockercfg value:\n$dockercfg"
