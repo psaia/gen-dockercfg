@@ -5,14 +5,10 @@ dockercfg code manually instead of running: `kubectl create secret docker-regist
 
 ### Usage
 
-```bash
+```shell
 $ gen-dockercfg "your-server" "the-username" "the-password" "the-email"
-```
 
-Example output:
-
-```
-eyJodHRwczovL215LXNlcnZlci5jb20iOnsidXNlcm5hbWUiOiJteS11c2VybmFtZSIsInBhc3N3b3JkIjoibXktcGFzc3dvcmQiLCJlbWFpbCI6Im15QGVtYWlsLmNvbSIsImF1dGgiOiJiWGt0ZFhObGNtNWhiV1U2YlhrdGNHRnpjM2R2Y21RSyJ9fQo=
+# => eyJodHRwczovL215LXNlcnZlci5jb20iOnsidXNlcm5hbWUiOiJteS11c2VybmFtZSIsInBhc3N3b3JkIjoibXktcGFzc3dvcmQiLCJlbWFpbCI6Im15QGVtYWlsLmNvbSIsImF1dGgiOiJiWGt0ZFhObGNtNWhiV1U2YlhrdGNHRnpjM2R2Y21RSyJ9fQo=
 ```
 
 You could now use that value for the secret. E.g.
